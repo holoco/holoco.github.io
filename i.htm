@@ -1,33 +1,82 @@
-<script type="text/javascript">
-function qs(search_for) {
-        var query = window.location.search.substring(1);
-        var parms = query.split('?');        
-        return parms;
-}
-function show_image(src, width, height) {
-    var img = document.createElement("showImage");
-    img.src = src;
-    img.width = width;
-    img.height = height;
-    // This next line will just add it to the <body> tag
-    document.body.appendChild(img);
-}
+<!DOCTYPE HTML>
 
-address=qs("?");
-myurl="https://chainz.cryptoid.info/bay/address.dws?"+address+".htm";
-document.write('<A HREF="' + "https://www.bitbay.market" + '"><IMG SRC="' + "Explain.png" + '" border="0"></a>')
+<html>
+	<head>
+		<title>Generic</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
 
-function prepareFrame(qurl) {
-    var ifrm = document.createElement("iframe");
-    ifrm.setAttribute("src", qurl);
-    ifrm.style.width = "100%";
-    ifrm.style.height = "480px";
-    document.body.appendChild(ifrm);
-}
-//document.write(myurl);
-prepareFrame(myurl);
+	<body class="is-preload">
 
-document.getElementById("showImage").onclick = function() {
-    window.location="bitbay.market";
-}
-</script> 
+		<!-- Header -->
+			<header id="header">
+
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+							<div class="inner">
+									<center><span class="100%"><a href="https://bitbay.market/downloads/" alt="bitbay.market/downloads/"><img src="images/example-coin.jpg" alt="bitbay.market/downloads/"></a></span>
+									</br><a>Scanning the QR Code this page shows below
+									   account balance of BitBay Coins.</br>
+									   If you wish to redeem them, scratch 
+									   off the grey box and import the private key
+									   written beneath it into the Bitbay QT Wallet</a>
+									</br><a href="https://bitbay.market/downloads/" alt="bitbay.market/"> Click here to download BitBay QT and learn more visit www.bitbay.market</a>
+									</br><bold>Scroll down to see your scanned coins live balance.</br></center></bold>
+											
+								</header>
+								
+							<script type="text/javascript">
+								function qs(search_for) {
+										var query = window.location.search.substring(1);
+										var parms = query.split('?');        
+										return parms;
+								}
+								
+								address=qs("?");
+								myurl="https://chainz.cryptoid.info/bay/address.dws?"+address+".htm";
+								
+								function prepareFrame(qurl) {
+									var ifrm = document.createElement("iframe");
+									ifrm.setAttribute("src", qurl);
+									ifrm.style.width = "100%";
+									ifrm.style.height = "540px";
+									document.body.appendChild(ifrm);
+								}
+								//document.write(myurl);
+								prepareFrame(myurl);
+								
+								document.getElementById("showImage").onclick = function() {
+									window.location="bitbay.market";
+								}
+								</script> 
+							 </div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper">
+				<div class="inner">
+					<ul class="menu"></ul>
+						<a>Disclaimer: These physical tokens are a promotional and novelty item. A physical token can not compare to the security of using open source software. They are possible to transfer from person to person but not completely resistant to counterfeit. A more secure system can be made with p2sh accounts if the product becomes popular. In the meantime, we recommend you redeem the coins the moment they are given to you by importing the private key into the BitBay QT wallet. We are not responsible for manufacturer defects, missing keys, damaged items, or counterfeit not affiliated with the original manufacturer. If being used for cold storage we recommend to not store large amounts and instead use official open source software with a secure method of key storage.</a>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts  -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
