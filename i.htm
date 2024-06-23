@@ -28,7 +28,7 @@
 									   off the grey box and import the private key
 									   written beneath it into the Bitbay QT Wallet</a>
 									</br><a href="https://bitbay.market/downloads/" alt="bitbay.market/"> Click here to download BitBay QT and learn more visit www.bitbay.market</a>
-									</br><bold>Scroll down to see your scanned coins live balance.</br></center></bold>
+									</br><bold>Click the link to see your scanned coins live balance.</br></center></bold>
 											
 								</header>
 								
@@ -50,7 +50,14 @@
 									document.body.appendChild(ifrm);
 								}
 								//document.write(myurl);
-								prepareFrame(myurl);
+								//prepareFrame(myurl); //They no longer support iframe
+								var newDiv = document.createElement("div");
+
+								// Set innerHTML of the div with the clickable link
+								newDiv.innerHTML = `<center><a href="${myurl}" style="padding: 10px 20px; background-color: #007bff; color: #fff; text-decoration: none; border: none; cursor: pointer;">Click here to see your address and balance</a></center>`;
+
+								// Append the new div below the last element placed
+								document.body.appendChild(newDiv);
 								
 								document.getElementById("showImage").onclick = function() {
 									window.location="bitbay.market";
